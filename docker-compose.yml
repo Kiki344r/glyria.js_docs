@@ -1,0 +1,12 @@
+# docker-compose.yml
+services:
+  docs:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "4123:3000"
+    command: sh -c "npm install && npm run build && npm run preview"
+    environment:
+      - NODE_ENV=production
