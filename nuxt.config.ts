@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   extends: ['docus'],
-  modules: ['@nuxtjs/i18n', 'nuxt-studio'],
+  modules: ['@nuxtjs/i18n', 'nuxt-studio', '@vercel/analytics'],
   site: {
     url: 'https://js.glyria.app'
   },
