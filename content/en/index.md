@@ -1,7 +1,7 @@
 ---
 seo:
   title: glyria.js — The Discord Bot Framework
-  description: Build Discord bots with a clean developer experience, file-based commands, auto-imports, and Embed V2 support. Built on top of discord.js.
+  description: Build Discord bots with a clean developer experience — file-based commands, declarative cooldowns and permissions, a module SDK, a local studio, time-travel debugging, and zero-downtime deploys. Built on top of discord.js.
 ---
 
 ::u-page-hero
@@ -9,7 +9,7 @@ seo:
 Build Discord bots the right way.
 
 #description
-A clean, file-based Discord bot framework built on top of discord.js.
+A clean, file-based Discord bot framework built on top of discord.js — with batteries you didn't know you needed.
 
 #links
 
@@ -32,21 +32,76 @@ Everything you need to build your bot
 icon: i-lucide-folder-open
 ---
 #title
-[File-based]{.text-primary} commands
+[File-based]{.text-primary} everything
 
 #description
-Drop a file into `src/commands/` and it will automatically be loaded and registered on Discord. No manual imports, no registration boilerplate.
+Commands, events, components, and modules load straight from your folders. No manual imports, no registration boilerplate.
 :::
 
 :::u-page-feature
 ---
-icon: i-lucide-zap
+icon: i-lucide-message-square
 ---
 #title
-[Auto-imports]{.text-primary} everywhere
+The [ctx.g]{.text-primary} context
 
 #description
-Every glyria.js utility is globally available in your command files — `GlyriaClient`, `GlyriaCommand`, `EmbedV2Builder`, and more. No imports required.
+Styled replies in one line, fluent chaining, `confirm()`, `paginate()`, auto-defer, loading states, and a built-in store — injected automatically in every handler.
+:::
+
+:::u-page-feature
+---
+icon: i-lucide-shield-check
+---
+#title
+[Declarative]{.text-primary} guards
+
+#description
+`.setCooldown("5s")`, `.setPermissions(["BanMembers"])`, `.setOwnerOnly()` — cooldowns and permissions as one-liners, with styled error replies for free.
+:::
+
+:::u-page-feature
+---
+icon: i-lucide-package
+---
+#title
+[Module]{.text-primary} SDK
+
+#description
+Ship features as self-contained modules with lifecycle hooks, global middleware, dependency resolution, crash isolation, and typed inter-module APIs.
+:::
+
+:::u-page-feature
+---
+icon: i-lucide-monitor-play
+---
+#title
+[Studio]{.text-primary} web UI
+
+#description
+`glyria studio` opens a local UI that runs your commands and previews the Discord render live — without ever opening Discord.
+:::
+
+:::u-page-feature
+---
+icon: i-lucide-history
+---
+#title
+[Time-travel]{.text-primary} debugging
+
+#description
+Every interaction is recorded in dev. Reproduce a user-reported bug with `glyria replay <id>` — no user required.
+:::
+
+:::u-page-feature
+---
+icon: i-lucide-refresh-cw
+---
+#title
+[Zero-downtime]{.text-primary} deploys
+
+#description
+`glyria reload` hot-swaps your handlers in memory while the bot keeps running. Crash loops roll back to the last stable build automatically.
 :::
 
 :::u-page-feature
@@ -57,29 +112,7 @@ icon: i-lucide-layout
 [Embed V2]{.text-primary} builder
 
 #description
-First-class support for Discord's new Components V2 system. Build rich, interactive messages with a clean and type-safe builder API.
-:::
-
-:::u-page-feature
----
-icon: i-lucide-terminal
----
-#title
-Powerful [CLI]{.text-primary}
-
-#description
-Scaffold a new project, run in development mode with hot reload, and build for production — all with a single command.
-:::
-
-:::u-page-feature
----
-icon: i-lucide-shield-check
----
-#title
-Fully [typed]{.text-primary}
-
-#description
-Written in TypeScript from the ground up. Every builder, option, and context is fully typed and auto-completed in your IDE.
+First-class support for Discord's Components V2 system — plus typed customIds that parse their own parameters.
 :::
 
 :::u-page-feature
@@ -90,7 +123,7 @@ icon: i-lucide-plug
 Built on [discord.js]{.text-primary}
 
 #description
-glyria.js is a lightweight DX layer built on top of discord.js. You always have access to the raw client when needed — no lock-in, ever.
+glyria.js is a DX layer on top of discord.js. You always have access to the raw client when needed — no lock-in, ever.
 :::
 
 ::
